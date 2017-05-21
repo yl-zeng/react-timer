@@ -21,6 +21,8 @@ var Timer = React.createClass({
           this.setState({
             count:0
           });
+          clearInterval(this.timer);
+          this.timer = undefined;
           break;
         case 'paused':
           clearInterval(this.timer);
